@@ -1,0 +1,93 @@
+.container {
+  width: 100vw;
+  height: 100vw;
+  display: flex;
+
+}
+
+.user {
+  width: 20vw;
+  height: 40vh;
+  border-radius: 10px;
+  margin: 6%;
+  background-color: #302F3D;
+  color: #837E9F;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+
+  img {
+    border-radius: 50%;
+    width: 40%;
+    height: 40%;
+  }
+
+  p:nth-of-type(1) {
+    margin: 3%;
+    font-size: 1.5rem;
+  }
+
+  p:nth-of-type(2) {
+    font-size: .9rem;
+  }
+
+}
+
+.adress {
+  width: 20vw;
+  border-radius: 10px;
+  margin: 6%;
+  padding: 2%;
+  background-color: #302F3D;
+}
+
+.tecnologia {
+  width: 20vw;
+  height: 25vh;
+  border-radius: 10px;
+  margin: 6%;
+  padding: 1%;
+  background-color: #302F3D;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  strong {
+    width: 100%;
+    margin-bottom: 1%;
+    padding: 1%;
+  }
+
+  p {
+    background-color: #CB92B1;
+    color: #000000;
+    border-radius: 50px;
+    width: 5vw;
+    height: 3vh;
+    margin: 1%;
+    text-align: center;
+
+  }
+}
+
+.menuPortifolio {
+  width: 50vw;
+  height: 5vh;
+  background-color: #302F3D;
+  position: relative;
+  border-radius: 10px;
+  margin-left: 10%;
+  margin-top: 2.5%;
+  padding: 1%;
+  display: flex;
+  justify-content: space-between;
+
+  a {
+    color: #000000;
+    text-decoration: none;
+  }
+
+}
