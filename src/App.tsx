@@ -1,17 +1,27 @@
-import { useState } from 'react';
 import style from './styles/App.module.scss'
 
-export function App() {
+interface Repo {
+  name: string;
+  descption: string;
+}
 
-  const [repositories, setRepositories] = useState([]);
+export function App() {
 
   return (
     <div className={style.container}>
       <div>
         <div className={style.user}>
           <img src="https://github.com/Maikongab20.png" />
-          <p>Maikon Gabriel</p>
+          <h2>Maikon Gabriel</h2>
           <p>Developer</p>
+        </div>
+
+        <div className={style.sobre}>
+          <h2>Sobre min</h2>
+          <p> Sou um programador empenhado em alcançar o próximo nível,
+            em aprender novas tecnologias adquirindo novos conhecimentos,
+            e superar obstáculos junto da equipe.
+          </p>
         </div>
 
         <div className={style.adress}>
@@ -32,16 +42,26 @@ export function App() {
           <p>react native</p>
         </div>
       </div>
-      <div>
+      {/* lado direito */}
+      <div className={style.direito}>
         <div className={style.menuPortifolio} >
-          <p>Meus Projeros Recentes</p>
+          <p>Meus Projeros</p>
           <a href="https://github.com/Maikongab20">Veja Todos</a>
         </div>
 
-        <div className="portifolio">
+        <div className={style.portifolio}>
 
+          <div className={style.post}>
+            <h2>my-onix</h2>
+            <strong>Consulte os códigos de erro que aparecem no painel do veículo Onix.</strong>
+            <p>java Script</p>
+          </div>
+          <div className={style.post2}>
+            <h2>my-onix</h2>
+            <strong>Consulte os códigos de erro que aparecem no painel do veículo Onix.</strong>
+            <p>java Script</p>
+          </div>
         </div>
-        <div className="portifolio "></div>
       </div>
     </div>
   );
