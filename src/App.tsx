@@ -25,10 +25,11 @@ export function App() {
         </div>
 
         <div className={style.adress}>
-          <p>github</p>
-          <p>linkedin</p>
-          <p>blog</p>
-          <p>email</p>
+          <h3>github</h3>
+          <p>Maikongab20</p>
+          <h3>linkedin</h3>
+          <h3>blog</h3>
+          <h3>email</h3>
         </div>
         <div className={style.tecnologia}>
           <strong>Tecnologia</strong>
