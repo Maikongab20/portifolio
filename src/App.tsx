@@ -11,6 +11,7 @@ import google from './icons/google.svg';
 interface Repo {
   full_name: string;
   descption: string;
+  language: string;
 }
 
 export function App() {
@@ -80,17 +81,17 @@ export function App() {
         </div>
 
         <div className={style.portifolio}>
-
-          <div className={style.post}>
-            <h2>my-onix</h2>
-            <strong>Consulte os códigos de erro que aparecem no painel do veículo Onix.</strong>
-            <p>java Script</p>
-          </div>
-          <div className={style.post2}>
-            <h2>my-onix</h2>
-            <strong>Consulte os códigos de erro que aparecem no painel do veículo Onix.</strong>
-            <p>java Script</p>
-          </div>
+          {
+            repos.map(repo => {
+              return (
+                <div className={style.post} key={repo.full_name}>
+                  <h2>{repo.full_name}</h2>
+                  <strong>{repo.descption}</strong>
+                  <p>{repo.language}</p>
+                </div>
+              )
+            })
+          }
         </div>
       </div>
     </div >

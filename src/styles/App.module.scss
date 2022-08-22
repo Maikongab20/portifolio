@@ -129,19 +129,20 @@
 
 .portifolio {
   display: flex;
+  width: 350px;
+  scroll-snap-type: x mandatory;
+  scroll-padding: 25px;
+  column-gap: 20px;
+  background-color: #302F3D;
+  margin: 3%;
 }
 
 .post {
-  width: 25vw;
-  height: 15vh;
-  background-color: #302F3D;
-  border-radius: 10px;
-  padding: 1%;
-  margin-top: 2%;
-  display: grid;
+  flex: 0 0 100%;
+  padding: 30px;
+  scroll-snap-align: start;
+  border-radius: 30px;
 
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
 
   h2 {
     grid-column-start: 1;
