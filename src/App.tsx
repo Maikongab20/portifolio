@@ -1,11 +1,30 @@
 import style from './styles/App.module.scss'
+import { useEffect, useState } from 'react';
+import axios from 'axios';
+// import img
+import github from './icons/github.svg';
+import linkedin from './icons/linkedin.svg';
+import whatsapp from './icons/whatsapp.svg';
+import google from './icons/google.svg';
+
 
 interface Repo {
-  name: string;
+  full_name: string;
   descption: string;
 }
 
 export function App() {
+
+  const [repos, setRepos] = useState<Repo[]>([]);
+
+  useEffect(() => {
+    axios.get('https://api.github.com/users/Maikongab20/repos')
+      .then(response => {
+        setRepos(response.data);
+      });
+  }, []);
+
+  console.log(repos);
 
   return (
     <div className={style.container}>
@@ -25,11 +44,22 @@ export function App() {
         </div>
 
         <div className={style.adress}>
-          <h3>github</h3>
-          <p>Maikongab20</p>
-          <h3>linkedin</h3>
-          <h3>blog</h3>
-          <h3>email</h3>
+          <div>
+            <img src={github} />
+            <a href="https://github.com/Maikongab20" >Mikon Gabriel</a>
+          </div>
+          <div>
+            <img src={google} />
+            <p>maikon111gabriel@gmail.com</p>
+          </div>
+          <div>
+            <img src={linkedin} />
+            <a href="https://www.linkedin.com/in/maikon-gabriel-silva-49b70b193/" >Maikon Gabriel</a>
+          </div>
+          <div>
+            <img src={whatsapp} />
+            <a href='https://api.whatsapp.com/send?phone=5514996824171'>(014)996824171</a>
+          </div>
         </div>
         <div className={style.tecnologia}>
           <strong>Tecnologia</strong>
@@ -47,7 +77,6 @@ export function App() {
       <div className={style.direito}>
         <div className={style.menuPortifolio} >
           <p>Meus Projeros</p>
-          <a href="https://github.com/Maikongab20">Veja Todos</a>
         </div>
 
         <div className={style.portifolio}>
@@ -64,6 +93,6 @@ export function App() {
           </div>
         </div>
       </div>
-    </div>
+    </div >
   );
 }
